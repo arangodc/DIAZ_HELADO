@@ -1,0 +1,447 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Archivo', sans-serif;
+  background-color: #fffdf7;
+  color: #000;
+}
+
+/* NAV */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fffdf7;
+  z-index: 100;
+}
+
+.nav__inner {
+  width: 1440px;
+  height: 120px;
+  margin: 0 auto;
+  padding: 0 324px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* BOTÓN */
+.nav__item {
+  position: relative;
+  font-family: 'Archivo', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+/* TEXTO */
+.nav__text {
+  position: relative;
+  z-index: 2;
+}
+
+/* SVG HOVER */
+.nav__hover {
+  position: absolute;
+  left: 55%;
+  bottom: 22px; /* ajusta según Figma */
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: instant;
+}
+
+/* ESTADO HOVER */
+.nav__item:hover .nav__hover {
+  opacity: 1;
+}
+
+/* LOGO */
+.nav__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__logo img {
+  height: 72px; /* según proporción Figma */
+  width: auto;
+}
+
+/* SECCIONES */
+section {
+  min-height: 100vh;
+  padding-top: 120px;
+}
+
+/* LOGO */
+.nav__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__logo img {
+  height: 72px; /* ajustable al SVG real */
+  width: auto;
+}
+
+/* SECCIONES */
+section {
+  min-height: 100vh;
+  padding-top: 104px; /* compensa nav fija */
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  width: 1440px;
+  height: 900px;
+  margin: 0 auto;
+  padding-top: 120px; /* nav */
+
+  overflow: hidden;
+}
+
+/* VIDEO */
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* AUTO LAYOUT PADRE */
+.hero__content {
+  position: relative;
+  z-index: 2;
+
+  height: calc(900px - 120px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 40px; /* separación títulos ↔ botón */
+}
+
+/* AUTO LAYOUT HIJO (solo textos) */
+.hero__titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px; /* separación menor entre h1 y h3 */
+}
+
+/* TEXTOS */
+.hero h1,
+.hero h3 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 800; /* ExtraBold */
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 16px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+/* BOTÓN */
+.hero__button {
+  width: 180px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #000;
+  color: #fffffa;
+
+  font-family: 'Archivo', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: lowercase;
+  text-decoration: none;
+
+  transition: instant;
+}
+
+/* HOVER EXACTO Figma */
+.hero__button:hover {
+  background-color: transparent;
+  color: #000;
+  box-shadow: inset 0 0 0 2px #000; /* contorno interno 2px */
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nosotras {
+  position: relative;
+  padding: 120px 0;
+  overflow visible;
+}
+
+.nosotras__inner {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+
+  position: relative;
+  z-index: 2; /* encima del vector */
+}
+
+.nosotras__text {
+  width: 588px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px; /* espaciado Auto Layout (ajustable si Figma dice otro) */
+}
+
+.nosotras__text h2 {
+  font-family: 'Castoro', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 55px;
+  color: #000;
+}
+
+.nosotras__text p {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000;
+}
+
+.nosotras__bg {
+  position: absolute;
+  top: 600px;              /* ajusta según Figma */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1440px;
+  height: auto;
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+.nosotras__image {
+  position: absolute;
+  right: 0;
+  top: 460px;                 /* o el valor exacto de Figma */
+  transform: translateY(-50%);
+
+  width: 606px;
+  height: 495px;
+
+  z-index: 1;
+}
+
+.sabores {
+  padding: 220px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.sabores__intro {
+  width: 792px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  align-items: center;   /* centra SVG y bloque de texto */
+  text-align: center;    /* centra el texto */
+}
+
+.sabores__icon {
+  width: auto;        /* respeta el SVG */
+  height: auto;
+  display: block;
+}
+
+.sabores__text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sabores__text h2 {
+  font-family: 'Castoro', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 55px;
+  color: #000;
+}
+
+.sabores__text p {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000;
+}
+
+.sabores__grid {
+  width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+
+  align-content: start;
+}
+
+.sabor-card {
+  position: relative;
+
+  width: 282px;
+  height: 282px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.sabor-card__bg {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sabor-card p {
+  position: relative;
+  z-index: 1;
+
+  font-family: 'Castoro', serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: normal;
+
+  color: #000;
+  text-align: center;
+}
+
+.sabor-card {
+  color: var(--sabor-color); 
+}
+
+.sabor-card--melon {
+  --sabor-color: #FFAE85;
+}
+
+.sabor-card--guayaba {
+  --sabor-color: #FFE6A9;
+}
+
+.sabor-card--chocolate {
+  --sabor-color: #5E4034;
+}
+
+.sabor-card--fresa {
+  --sabor-color: #FFA6B4;
+}
+
+.sabor-card--limon {
+  --sabor-color: #EFE984;
+}
+
+.sabor-card--mamey {
+  --sabor-color: #FF8279;
+}
+
+.sabor-card--mango {
+  --sabor-color: #FFB533;
+}
+
+.sabor-card--cafe {
+  --sabor-color: #D3AA72;
+}
+
+.sabor-card__content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sabor-card__title {
+  margin-top: 128px;
+  font-family: 'Castoro', serif;
+  font-size: 20px;
+  line-height: normal;
+  transition: transform 0.35s ease;
+}
+
+.sabor-card__subtitle {
+  margin-top: 8px;
+  opacity: 0;
+  transform: translateY(210px);
+
+  font-family: 'Castoro', serif;
+  font-size: 20px;
+
+  transition: transform 0.3s ease;
+}
+
+.sabor-card__texture {
+  position: absolute;
+  left: 50%;
+  bottom: -210px;
+  transform: translateX(-50%);
+
+  width: 210px;
+  height: 210px;
+
+  z-index: 1;
+
+  transition: transform 0.45s ease;
+}
+
+.sabor-card:hover .sabor-card__title {
+  transform: translateY(-14px);
+}
+
+.sabor-card:hover .sabor-card__subtitle {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sabor-card:hover .sabor-card__texture {
+  transform: translateX(-50%) translateY(-244px);
+}
+
+.sabor-card:hover .sabor-card__extra {
+  opacity: 1;
+}
