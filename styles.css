@@ -511,6 +511,57 @@ body {
   line-height: 1;
 }
 
+.contacto {
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.contacto__wrapper {
+  width: 792px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  text-align: center;
+}
+
+.contacto__wrapper h2 {
+  width: 588px;
+  font-family: 'Castoro', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 55px;
+  color: #000;
+}
+
+.contacto__data {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contacto__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Archivo';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.contacto__gif {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
 
 
 
