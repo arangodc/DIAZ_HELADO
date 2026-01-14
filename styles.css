@@ -81,8 +81,7 @@ body {
   width: auto;
 }
 
-/* SECCIONES */
-section {
+.section--full {
   min-height: 100vh;
   padding-top: 120px;
 }
@@ -99,12 +98,6 @@ section {
   width: auto;
 }
 
-/* SECCIONES */
-section {
-  min-height: 100vh;
-  padding-top: 104px; /* compensa nav fija */
-}
-
 /* HERO */
 .hero {
   position: relative;
@@ -112,7 +105,6 @@ section {
   height: 900px;
   margin: 0 auto;
   padding-top: 120px; /* nav */
-
   overflow: hidden;
 }
 
@@ -129,14 +121,11 @@ section {
 .hero__content {
   position: relative;
   z-index: 2;
-
   height: calc(900px - 120px);
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   gap: 40px; /* separación títulos ↔ botón */
 }
 
@@ -164,20 +153,16 @@ section {
 .hero__button {
   width: 180px;
   height: 44px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   background-color: #000;
   color: #fffffa;
-
   font-family: 'Archivo', sans-serif;
   font-size: 18px;
   font-weight: 500;
   text-transform: lowercase;
   text-decoration: none;
-
   transition: instant;
 }
 
@@ -205,7 +190,6 @@ section {
   margin: 0 auto;
   display: flex;
   justify-content: flex-start;
-
   position: relative;
   z-index: 2; /* encima del vector */
 }
@@ -241,7 +225,6 @@ section {
   transform: translateX(-50%);
   width: 1440px;
   height: auto;
-
   z-index: 0;
   pointer-events: none;
 }
@@ -251,28 +234,26 @@ section {
   right: 0;
   top: 460px;                 /* o el valor exacto de Figma */
   transform: translateY(-50%);
-
   width: 606px;
   height: 495px;
-
   z-index: 1;
 }
 
 .sabores {
-  padding: 220px 0;
+  min-height: auto;
+  padding-top: 120px;
   display: flex;
   justify-content: center;
 }
 
 .sabores__intro {
+  margin-top: 200px;
   width: 792px;
-
   display: flex;
   flex-direction: column;
   gap: 20px;
-
   align-items: center;   /* centra SVG y bloque de texto */
-  text-align: center;    /* centra el texto */
+  text-align: center;   /* centra el texto */
 }
 
 .sabores__icon {
@@ -284,7 +265,7 @@ section {
 .sabores__text {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 32px;
 }
 
 .sabores__text h2 {
@@ -305,13 +286,12 @@ section {
 }
 
 .sabores__grid {
+  padding: 60px 0;
   width: 1200px;
   margin: 0 auto;
-
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-
   align-content: start;
 }
 
