@@ -444,4 +444,43 @@ body {
   color: #fffffa;
 }
 
+.pedidos {
+  display: grid;
+  grid-template-columns: 810px 1fr;
+  align-items: center;
+  min-height: auto; /* importante */
+}
+
+.pedidos__image img {
+  width: 810px;
+  height: auto;
+  display: block;
+}
+
+.pedidos__content {
+  width: 486px;
+  margin-right: 120px; /* aire editorial */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pedidos__content h2 {
+  font-family: 'Castoro', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 55px;
+  color: #000;
+}
+
+.pedidos__content p {
+  font-family: 'Archivo';
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+}
+
+
+
 
