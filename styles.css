@@ -301,7 +301,6 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  cursor: pointer;
   color: var(--sabor-color);
 }
 
