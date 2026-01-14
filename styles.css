@@ -317,10 +317,8 @@ section {
 
 .sabor-card {
   position: relative;
-
   width: 282px;
   height: 282px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -416,16 +414,14 @@ section {
 }
 
 .sabor-card__badge {
+  margin-top: 0px;
+  opacity: 0;
+  transform: translateY(210px);
+
   font-family: 'Archivo';
-  font-weight: 500;
   font-size: 12px;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transform: translateX(-50%);
+
+  transition: transform 0.3s ease;
 }
 
 .sabor-card__texture {
@@ -452,6 +448,11 @@ section {
 .sabor-card:hover .sabor-card__text--hover {
   opacity: 1;
   transform: translateY(0);
+}
+
+.sabor-card:hover .sabor-card__badge {
+  opacity: 1;
+  transform: translateY(100px);
 }
 
 .sabor-card:hover .sabor-card__texture {
