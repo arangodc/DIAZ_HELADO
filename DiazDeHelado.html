@@ -15,6 +15,8 @@
 </head>
 <body>
 
+<main>
+
 <header class="nav">
   <nav class="nav__inner">
 
@@ -576,6 +578,18 @@
   </div>
 </section>
 
+<a
+    href="https://wa.me/52XXXXXXXXXX"
+    class="fab-whatsapp"
+    target="_blank"
+    aria-label="WhatsApp"
+    >
+      <img src="assets/assets_FAB_Default.svg" class="fab-whatsapp__icon fab-whatsapp__icon--default" alt="">
+      <img src="assets/assets_FAB_Hover.svg" class="fab-whatsapp__icon fab-whatsapp__icon--hover" alt="">
+</a>
+
+</main>
+
 <footer class="footer">
   <!-- SVG de fondo -->
   <svg
@@ -611,14 +625,33 @@
   </div>
 </footer>
 
-  <!-- Secciones -->
-  <main>
-    <section id="hero"></section>
-    <section id="nosotras"></section>
-    <section id="sabores"></section>
-    <section id="pedidos"></section>
-    <section id="contacto"></section>
-  </main>
-
 </body>
 </html>
+
+<script>
+  const fab = document.querySelector('.fab-whatsapp');
+  const footer = document.querySelector('.footer');
+
+  const OFFSET = 80; // distancia antes del footer
+  const START_TOP = 670;
+
+  function updateFabPosition() {
+    const footerTop = footer.getBoundingClientRect().top + window.scrollY;
+    const fabHeight = fab.offsetHeight;
+    const scrollY = window.scrollY;
+
+    const stopPoint = footerTop - fabHeight - OFFSET;
+
+    if (scrollY + START_TOP >= stopPoint) {
+      fab.style.position = 'absolute';
+      fab.style.top = stopPoint + 'px';
+    } else {
+      fab.style.position = 'fixed';
+      fab.style.top = START_TOP + 'px';
+    }
+  }
+
+  window.addEventListener('scroll', updateFabPosition);
+  window.addEventListener('resize', updateFabPosition);
+  updateFabPosition();
+</script>
