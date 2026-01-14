@@ -326,6 +326,7 @@ section {
   justify-content: center;
   overflow: hidden;
   cursor: pointer;
+  color: var(--sabor-color);
 }
 
 .sabor-card__bg {
@@ -348,10 +349,6 @@ section {
 
   color: #000;
   text-align: center;
-}
-
-.sabor-card {
-  color: var(--sabor-color); 
 }
 
 .sabor-card--melon {
@@ -389,11 +386,14 @@ section {
 .sabor-card__content {
   position: absolute;
   inset: 0;
-  z-index: 2;
-
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: translateY(12px); /* baja el copy */
+  gap: 0;
+  transition: transform 300ms ease;
 }
 
 .sabor-card__title {
@@ -405,7 +405,7 @@ section {
 }
 
 .sabor-card__subtitle {
-  margin-top: 8px;
+  margin-top: 0px;
   opacity: 0;
   transform: translateY(210px);
 
@@ -415,25 +415,41 @@ section {
   transition: transform 0.3s ease;
 }
 
+.sabor-card__badge {
+  font-family: 'Archivo';
+  font-weight: 500;
+  font-size: 12px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
 .sabor-card__texture {
   position: absolute;
   left: 50%;
   bottom: -210px;
   transform: translateX(-50%);
-
   width: 210px;
   height: 210px;
-
   z-index: 1;
-
   transition: transform 0.45s ease;
 }
 
-.sabor-card:hover .sabor-card__title {
-  transform: translateY(-14px);
+.sabor-card:hover .sabor-card__content {
+  transform: translateY(-2px);
 }
 
-.sabor-card:hover .sabor-card__subtitle {
+.sabor-card__text--hover {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 250ms ease, transform 250ms ease;
+}
+
+.sabor-card:hover .sabor-card__text--hover {
   opacity: 1;
   transform: translateY(0);
 }
@@ -445,3 +461,5 @@ section {
 .sabor-card:hover .sabor-card__extra {
   opacity: 1;
 }
+
+
